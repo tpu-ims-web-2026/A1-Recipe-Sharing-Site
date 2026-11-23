@@ -1,0 +1,8 @@
+# Test sirasinda yuklenen fotograflar GitHub'a gitmesin (klasor kalsin, icindekiler gitmesin)
+uploads/*
+!uploads/.gitkeep
+
+# Windows ve editor dosyalari
+Thumbs.db
+Desktop.ini
+.vscode/
