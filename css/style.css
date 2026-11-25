@@ -1,0 +1,177 @@
+/* css/style.css */
+/* Crumbly - main stylesheet */
+
+/* ============================
+   1. Variables (colors, fonts)
+   ============================ */
+:root {
+    --color-bg: #11212D;       /* main background, footer */
+    --color-surface: #253745;  /* navigation, cards, buttons */
+    --color-border: #4A5C6A;   /* hover effects, borders */
+    --color-muted: #9BA8AB;    /* secondary text */
+    --color-text: #CCD0CF;     /* main text */
+
+    --font-body: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    --font-logo: "Caveat", cursive;
+}
+
+/* ============================
+   2. Base styles
+   ============================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* main grows to fill the screen, so the footer stays at the bottom */
+main {
+    flex: 1;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+a {
+    color: var(--color-text);
+}
+
+a:hover {
+    color: var(--color-muted);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-muted);
+    outline-offset: 2px;
+}
+
+/* Centers page content and limits its width */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+/* ============================
+   3. Logo
+   ============================ */
+.logo {
+    font-family: var(--font-logo);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: var(--color-muted);
+}
+
+/* ============================
+   4. Navigation bar
+   ============================ */
+.site-header {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    background: var(--color-border);
+    color: var(--color-text);
+}
+
+/* ============================
+   5. Footer
+   ============================ */
+.site-footer {
+    margin-top: 3rem;
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+    text-align: center;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-inner nav {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.footer-inner nav a {
+    color: var(--color-muted);
+}
+
+.footer-inner nav a:hover {
+    color: var(--color-text);
+}
+
+.footer-slogan,
+.footer-copy {
+    margin: 0;
+}
+
+/* ============================
+   6. Responsive (small screens)
+   ============================ */
+@media (max-width: 700px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 1.75rem;
+    }
+}
