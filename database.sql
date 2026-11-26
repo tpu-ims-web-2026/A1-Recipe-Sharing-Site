@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS users(
 -- Categories table: Stores recipe categories
 CREATE TABLE IF NOT EXISTS categories(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL
+    name VARCHAR(50) NOT NULL 
 );
 
 -- Recipes table: Stores title, ingredients, instructions, and image linked to user and category
